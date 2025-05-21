@@ -17,3 +17,5 @@ C:\Users\ratoj\source\repos\Morden\MordenDesk\obj\Debug\net8.0-windows\MordenDes
 C:\Users\ratoj\source\repos\Morden\MordenDesk\obj\Debug\net8.0-windows\ref\MordenDesk.dll
 C:\Users\ratoj\source\repos\Morden\MordenDesk\obj\Debug\net8.0-windows\MordenDesk.csproj.AssemblyReference.cache
 C:\Users\ratoj\source\repos\Morden\MordenDesk\obj\Debug\net8.0-windows\MordenDesk.Properties.Resources.resources
+C:\Users\ratoj\source\repos\Morden\MordenDesk\bin\Debug\net8.0-windows\ReaLTaiizor.dll
+C:\Users\ratoj\source\repos\Morden\MordenDesk\obj\Debug\net8.0-windows\MordenDesk.csproj.Up2Date

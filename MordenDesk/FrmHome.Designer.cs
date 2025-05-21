@@ -33,35 +33,36 @@
             panel1 = new Panel();
             nightControlBox1 = new ReaLTaiizor.Controls.NightControlBox();
             label1 = new Label();
-            pictureBox1 = new PictureBox();
-            flowLayoutPanel1 = new FlowLayoutPanel();
+            btnHam = new PictureBox();
+            flpSidebar = new FlowLayoutPanel();
             panel2 = new Panel();
             button1 = new Button();
+            flpMenu = new FlowLayoutPanel();
+            panel3 = new Panel();
+            btnMenu = new Button();
+            panel7 = new Panel();
+            btnSubMenu01 = new Button();
+            panel6 = new Panel();
+            btnSubMenu02 = new Button();
             btnSetting = new Panel();
             btnSettings = new Button();
             panel4 = new Panel();
             button3 = new Button();
             panel5 = new Panel();
             button4 = new Button();
-            flpMenu = new FlowLayoutPanel();
-            panel3 = new Panel();
-            button2 = new Button();
-            panel7 = new Panel();
-            button6 = new Button();
-            panel6 = new Panel();
-            button5 = new Button();
             menuTransition = new System.Windows.Forms.Timer(components);
+            sideBarTransition = new System.Windows.Forms.Timer(components);
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            flowLayoutPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)btnHam).BeginInit();
+            flpSidebar.SuspendLayout();
             panel2.SuspendLayout();
-            btnSetting.SuspendLayout();
-            panel4.SuspendLayout();
-            panel5.SuspendLayout();
             flpMenu.SuspendLayout();
             panel3.SuspendLayout();
             panel7.SuspendLayout();
             panel6.SuspendLayout();
+            btnSetting.SuspendLayout();
+            panel4.SuspendLayout();
+            panel5.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -69,7 +70,7 @@
             panel1.BackColor = Color.White;
             panel1.Controls.Add(nightControlBox1);
             panel1.Controls.Add(label1);
-            panel1.Controls.Add(pictureBox1);
+            panel1.Controls.Add(btnHam);
             panel1.Dock = DockStyle.Top;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
@@ -109,31 +110,37 @@
             label1.TabIndex = 2;
             label1.Text = "MORDERN FORM";
             // 
-            // pictureBox1
+            // btnHam
             // 
-            pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
-            pictureBox1.Location = new Point(12, 10);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(36, 26);
-            pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
-            pictureBox1.TabIndex = 1;
-            pictureBox1.TabStop = false;
+            btnHam.Image = (Image)resources.GetObject("btnHam.Image");
+            btnHam.Location = new Point(12, 10);
+            btnHam.Name = "btnHam";
+            btnHam.Size = new Size(36, 26);
+            btnHam.SizeMode = PictureBoxSizeMode.CenterImage;
+            btnHam.TabIndex = 1;
+            btnHam.TabStop = false;
+            btnHam.Click += btnHam_Click;
             // 
-            // flowLayoutPanel1
+            // flpSidebar
             // 
-            flowLayoutPanel1.BackColor = Color.Black;
-            flowLayoutPanel1.Controls.Add(panel2);
-            flowLayoutPanel1.Dock = DockStyle.Left;
-            flowLayoutPanel1.Location = new Point(0, 43);
-            flowLayoutPanel1.Name = "flowLayoutPanel1";
-            flowLayoutPanel1.Size = new Size(193, 554);
-            flowLayoutPanel1.TabIndex = 1;
+            flpSidebar.BackColor = Color.Black;
+            flpSidebar.Controls.Add(panel2);
+            flpSidebar.Controls.Add(flpMenu);
+            flpSidebar.Controls.Add(btnSetting);
+            flpSidebar.Controls.Add(panel4);
+            flpSidebar.Controls.Add(panel5);
+            flpSidebar.Dock = DockStyle.Left;
+            flpSidebar.Location = new Point(0, 43);
+            flpSidebar.Name = "flpSidebar";
+            flpSidebar.Size = new Size(193, 554);
+            flpSidebar.TabIndex = 1;
             // 
             // panel2
             // 
             panel2.BackColor = SystemColors.ActiveCaptionText;
             panel2.Controls.Add(button1);
-            panel2.Location = new Point(3, 3);
+            panel2.Location = new Point(0, 15);
+            panel2.Margin = new Padding(0, 15, 0, 0);
             panel2.Name = "panel2";
             panel2.Size = new Size(190, 42);
             panel2.TabIndex = 2;
@@ -153,11 +160,103 @@
             button1.Text = "             DashBoard";
             button1.UseVisualStyleBackColor = false;
             // 
+            // flpMenu
+            // 
+            flpMenu.BackColor = Color.Black;
+            flpMenu.Controls.Add(panel3);
+            flpMenu.Controls.Add(panel7);
+            flpMenu.Controls.Add(panel6);
+            flpMenu.Location = new Point(0, 57);
+            flpMenu.Margin = new Padding(0);
+            flpMenu.Name = "flpMenu";
+            flpMenu.Size = new Size(187, 42);
+            flpMenu.TabIndex = 3;
+            // 
+            // panel3
+            // 
+            panel3.BackColor = SystemColors.ActiveCaptionText;
+            panel3.Controls.Add(btnMenu);
+            panel3.Location = new Point(0, 0);
+            panel3.Margin = new Padding(0);
+            panel3.Name = "panel3";
+            panel3.Size = new Size(190, 42);
+            panel3.TabIndex = 2;
+            // 
+            // btnMenu
+            // 
+            btnMenu.BackColor = Color.Black;
+            btnMenu.FlatAppearance.BorderSize = 0;
+            btnMenu.FlatStyle = FlatStyle.Flat;
+            btnMenu.Font = new Font("Mont Heavy DEMO", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnMenu.ForeColor = Color.White;
+            btnMenu.Image = (Image)resources.GetObject("btnMenu.Image");
+            btnMenu.Location = new Point(3, 0);
+            btnMenu.Margin = new Padding(0);
+            btnMenu.Name = "btnMenu";
+            btnMenu.Size = new Size(187, 42);
+            btnMenu.TabIndex = 3;
+            btnMenu.Text = "             Menu";
+            btnMenu.UseVisualStyleBackColor = false;
+            btnMenu.Click += button2_Click;
+            // 
+            // panel7
+            // 
+            panel7.BackColor = SystemColors.ActiveCaptionText;
+            panel7.Controls.Add(btnSubMenu01);
+            panel7.Location = new Point(0, 42);
+            panel7.Margin = new Padding(0);
+            panel7.Name = "panel7";
+            panel7.Size = new Size(190, 42);
+            panel7.TabIndex = 2;
+            // 
+            // btnSubMenu01
+            // 
+            btnSubMenu01.BackColor = Color.Black;
+            btnSubMenu01.FlatAppearance.BorderSize = 0;
+            btnSubMenu01.FlatStyle = FlatStyle.Flat;
+            btnSubMenu01.Font = new Font("Mont Heavy DEMO", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnSubMenu01.ForeColor = Color.White;
+            btnSubMenu01.Image = (Image)resources.GetObject("btnSubMenu01.Image");
+            btnSubMenu01.Location = new Point(-6, -1);
+            btnSubMenu01.Margin = new Padding(0);
+            btnSubMenu01.Name = "btnSubMenu01";
+            btnSubMenu01.Size = new Size(202, 42);
+            btnSubMenu01.TabIndex = 3;
+            btnSubMenu01.Text = "             Sub menu";
+            btnSubMenu01.UseVisualStyleBackColor = false;
+            // 
+            // panel6
+            // 
+            panel6.BackColor = SystemColors.ActiveCaptionText;
+            panel6.Controls.Add(btnSubMenu02);
+            panel6.Location = new Point(0, 84);
+            panel6.Margin = new Padding(0);
+            panel6.Name = "panel6";
+            panel6.Size = new Size(190, 42);
+            panel6.TabIndex = 2;
+            // 
+            // btnSubMenu02
+            // 
+            btnSubMenu02.BackColor = Color.Black;
+            btnSubMenu02.FlatAppearance.BorderSize = 0;
+            btnSubMenu02.FlatStyle = FlatStyle.Flat;
+            btnSubMenu02.Font = new Font("Mont Heavy DEMO", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnSubMenu02.ForeColor = Color.White;
+            btnSubMenu02.Image = (Image)resources.GetObject("btnSubMenu02.Image");
+            btnSubMenu02.Location = new Point(0, 0);
+            btnSubMenu02.Margin = new Padding(0);
+            btnSubMenu02.Name = "btnSubMenu02";
+            btnSubMenu02.Size = new Size(190, 42);
+            btnSubMenu02.TabIndex = 3;
+            btnSubMenu02.Text = "             Sub menu";
+            btnSubMenu02.UseVisualStyleBackColor = false;
+            // 
             // btnSetting
             // 
             btnSetting.BackColor = SystemColors.ActiveCaptionText;
             btnSetting.Controls.Add(btnSettings);
-            btnSetting.Location = new Point(410, 300);
+            btnSetting.Location = new Point(0, 99);
+            btnSetting.Margin = new Padding(0);
             btnSetting.Name = "btnSetting";
             btnSetting.Size = new Size(190, 42);
             btnSetting.TabIndex = 2;
@@ -181,7 +280,8 @@
             // 
             panel4.BackColor = SystemColors.ActiveCaptionText;
             panel4.Controls.Add(button3);
-            panel4.Location = new Point(410, 357);
+            panel4.Location = new Point(0, 141);
+            panel4.Margin = new Padding(0);
             panel4.Name = "panel4";
             panel4.Size = new Size(190, 42);
             panel4.TabIndex = 2;
@@ -205,7 +305,8 @@
             // 
             panel5.BackColor = SystemColors.ActiveCaptionText;
             panel5.Controls.Add(button4);
-            panel5.Location = new Point(410, 415);
+            panel5.Location = new Point(0, 183);
+            panel5.Margin = new Padding(0);
             panel5.Name = "panel5";
             panel5.Size = new Size(190, 42);
             panel5.TabIndex = 2;
@@ -225,126 +326,38 @@
             button4.Text = "             Logout";
             button4.UseVisualStyleBackColor = false;
             // 
-            // flpMenu
-            // 
-            flpMenu.BackColor = Color.Black;
-            flpMenu.Controls.Add(panel3);
-            flpMenu.Controls.Add(panel7);
-            flpMenu.Controls.Add(panel6);
-            flpMenu.Location = new Point(413, 55);
-            flpMenu.Margin = new Padding(0);
-            flpMenu.Name = "flpMenu";
-            flpMenu.Size = new Size(187, 127);
-            flpMenu.TabIndex = 3;
-            // 
-            // panel3
-            // 
-            panel3.BackColor = SystemColors.ActiveCaptionText;
-            panel3.Controls.Add(button2);
-            panel3.Location = new Point(0, 0);
-            panel3.Margin = new Padding(0);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(190, 42);
-            panel3.TabIndex = 2;
-            // 
-            // button2
-            // 
-            button2.BackColor = Color.Black;
-            button2.FlatAppearance.BorderSize = 0;
-            button2.FlatStyle = FlatStyle.Flat;
-            button2.Font = new Font("Mont Heavy DEMO", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button2.ForeColor = Color.White;
-            button2.Image = (Image)resources.GetObject("button2.Image");
-            button2.Location = new Point(3, 0);
-            button2.Margin = new Padding(0);
-            button2.Name = "button2";
-            button2.Size = new Size(187, 42);
-            button2.TabIndex = 3;
-            button2.Text = "             Menu";
-            button2.UseVisualStyleBackColor = false;
-            // 
-            // panel7
-            // 
-            panel7.BackColor = SystemColors.ActiveCaptionText;
-            panel7.Controls.Add(button6);
-            panel7.Location = new Point(0, 42);
-            panel7.Margin = new Padding(0);
-            panel7.Name = "panel7";
-            panel7.Size = new Size(190, 42);
-            panel7.TabIndex = 2;
-            // 
-            // button6
-            // 
-            button6.BackColor = Color.Black;
-            button6.FlatAppearance.BorderSize = 0;
-            button6.FlatStyle = FlatStyle.Flat;
-            button6.Font = new Font("Mont Heavy DEMO", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button6.ForeColor = Color.White;
-            button6.Image = (Image)resources.GetObject("button6.Image");
-            button6.Location = new Point(-6, -1);
-            button6.Margin = new Padding(0);
-            button6.Name = "button6";
-            button6.Size = new Size(202, 42);
-            button6.TabIndex = 3;
-            button6.Text = "             Sub menu";
-            button6.UseVisualStyleBackColor = false;
-            // 
-            // panel6
-            // 
-            panel6.BackColor = SystemColors.ActiveCaptionText;
-            panel6.Controls.Add(button5);
-            panel6.Location = new Point(0, 84);
-            panel6.Margin = new Padding(0);
-            panel6.Name = "panel6";
-            panel6.Size = new Size(190, 42);
-            panel6.TabIndex = 2;
-            // 
-            // button5
-            // 
-            button5.BackColor = Color.Black;
-            button5.FlatAppearance.BorderSize = 0;
-            button5.FlatStyle = FlatStyle.Flat;
-            button5.Font = new Font("Mont Heavy DEMO", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button5.ForeColor = Color.White;
-            button5.Image = (Image)resources.GetObject("button5.Image");
-            button5.Location = new Point(0, 0);
-            button5.Margin = new Padding(0);
-            button5.Name = "button5";
-            button5.Size = new Size(190, 42);
-            button5.TabIndex = 3;
-            button5.Text = "             Sub menu";
-            button5.UseVisualStyleBackColor = false;
-            // 
             // menuTransition
             // 
+            menuTransition.Interval = 1;
+            menuTransition.Tick += menuTransition_Tick;
+            // 
+            // sideBarTransition
+            // 
+            sideBarTransition.Interval = 10;
+            sideBarTransition.Tick += sideBarTransition_Tick;
             // 
             // FrmHome
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
-            AutoScaleMode = AutoScaleMode.Font;
+            AutoScaleMode = AutoScaleMode.None;
             ClientSize = new Size(1015, 597);
-            Controls.Add(flpMenu);
-            Controls.Add(panel5);
-            Controls.Add(panel4);
-            Controls.Add(btnSetting);
-            Controls.Add(flowLayoutPanel1);
+            Controls.Add(flpSidebar);
             Controls.Add(panel1);
             ForeColor = Color.FromArgb(64, 64, 64);
             FormBorderStyle = FormBorderStyle.None;
             Name = "FrmHome";
-            Text = "fdf";
+            StartPosition = FormStartPosition.CenterScreen;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            flowLayoutPanel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)btnHam).EndInit();
+            flpSidebar.ResumeLayout(false);
             panel2.ResumeLayout(false);
-            btnSetting.ResumeLayout(false);
-            panel4.ResumeLayout(false);
-            panel5.ResumeLayout(false);
             flpMenu.ResumeLayout(false);
             panel3.ResumeLayout(false);
             panel7.ResumeLayout(false);
             panel6.ResumeLayout(false);
+            btnSetting.ResumeLayout(false);
+            panel4.ResumeLayout(false);
+            panel5.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -352,9 +365,9 @@
 
         private Panel panel1;
         private Label label1;
-        private PictureBox pictureBox1;
+        private PictureBox btnHam;
         private ReaLTaiizor.Controls.NightControlBox nightControlBox1;
-        private FlowLayoutPanel flowLayoutPanel1;
+        private FlowLayoutPanel flpSidebar;
         private Panel panel2;
         private Button button1;
         private Panel btnSetting;
@@ -365,11 +378,12 @@
         private Button button4;
         private FlowLayoutPanel flpMenu;
         private Panel panel3;
-        private Button button2;
+        private Button btnMenu;
         private Panel panel6;
-        private Button button5;
+        private Button btnSubMenu02;
         private Panel panel7;
-        private Button button6;
+        private Button btnSubMenu01;
         private System.Windows.Forms.Timer menuTransition;
+        private System.Windows.Forms.Timer sideBarTransition;
     }
 }
