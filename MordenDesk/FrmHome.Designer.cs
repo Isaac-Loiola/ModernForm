@@ -344,6 +344,7 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(822, 554);
             panel2.TabIndex = 3;
+            panel2.Paint += panel2_Paint;
             // 
             // FrmHome
             // 
