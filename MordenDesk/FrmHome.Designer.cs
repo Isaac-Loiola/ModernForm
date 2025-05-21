@@ -35,34 +35,35 @@
             label1 = new Label();
             btnHam = new PictureBox();
             flpSidebar = new FlowLayoutPanel();
-            panel2 = new Panel();
+            pnlDashboard = new Panel();
             button1 = new Button();
             flpMenu = new FlowLayoutPanel();
-            panel3 = new Panel();
+            pnlMenu = new Panel();
             btnMenu = new Button();
             panel7 = new Panel();
             btnSubMenu01 = new Button();
             panel6 = new Panel();
             btnSubMenu02 = new Button();
-            btnSetting = new Panel();
+            pnlSetting = new Panel();
             btnSettings = new Button();
-            panel4 = new Panel();
+            pnlAbout = new Panel();
             button3 = new Button();
-            panel5 = new Panel();
+            pnlLogout = new Panel();
             button4 = new Button();
             menuTransition = new System.Windows.Forms.Timer(components);
             sideBarTransition = new System.Windows.Forms.Timer(components);
+            panel2 = new Panel();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)btnHam).BeginInit();
             flpSidebar.SuspendLayout();
-            panel2.SuspendLayout();
+            pnlDashboard.SuspendLayout();
             flpMenu.SuspendLayout();
-            panel3.SuspendLayout();
+            pnlMenu.SuspendLayout();
             panel7.SuspendLayout();
             panel6.SuspendLayout();
-            btnSetting.SuspendLayout();
-            panel4.SuspendLayout();
-            panel5.SuspendLayout();
+            pnlSetting.SuspendLayout();
+            pnlAbout.SuspendLayout();
+            pnlLogout.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -124,26 +125,26 @@
             // flpSidebar
             // 
             flpSidebar.BackColor = Color.Black;
-            flpSidebar.Controls.Add(panel2);
+            flpSidebar.Controls.Add(pnlDashboard);
             flpSidebar.Controls.Add(flpMenu);
-            flpSidebar.Controls.Add(btnSetting);
-            flpSidebar.Controls.Add(panel4);
-            flpSidebar.Controls.Add(panel5);
+            flpSidebar.Controls.Add(pnlSetting);
+            flpSidebar.Controls.Add(pnlAbout);
+            flpSidebar.Controls.Add(pnlLogout);
             flpSidebar.Dock = DockStyle.Left;
             flpSidebar.Location = new Point(0, 43);
             flpSidebar.Name = "flpSidebar";
             flpSidebar.Size = new Size(193, 554);
             flpSidebar.TabIndex = 1;
             // 
-            // panel2
+            // pnlDashboard
             // 
-            panel2.BackColor = SystemColors.ActiveCaptionText;
-            panel2.Controls.Add(button1);
-            panel2.Location = new Point(0, 15);
-            panel2.Margin = new Padding(0, 15, 0, 0);
-            panel2.Name = "panel2";
-            panel2.Size = new Size(190, 42);
-            panel2.TabIndex = 2;
+            pnlDashboard.BackColor = SystemColors.ActiveCaptionText;
+            pnlDashboard.Controls.Add(button1);
+            pnlDashboard.Location = new Point(0, 15);
+            pnlDashboard.Margin = new Padding(0, 15, 0, 0);
+            pnlDashboard.Name = "pnlDashboard";
+            pnlDashboard.Size = new Size(190, 42);
+            pnlDashboard.TabIndex = 2;
             // 
             // button1
             // 
@@ -153,9 +154,9 @@
             button1.Font = new Font("Mont Heavy DEMO", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             button1.ForeColor = Color.White;
             button1.Image = (Image)resources.GetObject("button1.Image");
-            button1.Location = new Point(3, 0);
+            button1.Location = new Point(0, 0);
             button1.Name = "button1";
-            button1.Size = new Size(187, 42);
+            button1.Size = new Size(196, 42);
             button1.TabIndex = 3;
             button1.Text = "             DashBoard";
             button1.UseVisualStyleBackColor = false;
@@ -163,7 +164,7 @@
             // flpMenu
             // 
             flpMenu.BackColor = Color.Black;
-            flpMenu.Controls.Add(panel3);
+            flpMenu.Controls.Add(pnlMenu);
             flpMenu.Controls.Add(panel7);
             flpMenu.Controls.Add(panel6);
             flpMenu.Location = new Point(0, 57);
@@ -172,15 +173,15 @@
             flpMenu.Size = new Size(187, 42);
             flpMenu.TabIndex = 3;
             // 
-            // panel3
+            // pnlMenu
             // 
-            panel3.BackColor = SystemColors.ActiveCaptionText;
-            panel3.Controls.Add(btnMenu);
-            panel3.Location = new Point(0, 0);
-            panel3.Margin = new Padding(0);
-            panel3.Name = "panel3";
-            panel3.Size = new Size(190, 42);
-            panel3.TabIndex = 2;
+            pnlMenu.BackColor = SystemColors.ActiveCaptionText;
+            pnlMenu.Controls.Add(btnMenu);
+            pnlMenu.Location = new Point(0, 0);
+            pnlMenu.Margin = new Padding(0);
+            pnlMenu.Name = "pnlMenu";
+            pnlMenu.Size = new Size(190, 42);
+            pnlMenu.TabIndex = 2;
             // 
             // btnMenu
             // 
@@ -190,10 +191,10 @@
             btnMenu.Font = new Font("Mont Heavy DEMO", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnMenu.ForeColor = Color.White;
             btnMenu.Image = (Image)resources.GetObject("btnMenu.Image");
-            btnMenu.Location = new Point(3, 0);
+            btnMenu.Location = new Point(0, 0);
             btnMenu.Margin = new Padding(0);
             btnMenu.Name = "btnMenu";
-            btnMenu.Size = new Size(187, 42);
+            btnMenu.Size = new Size(196, 42);
             btnMenu.TabIndex = 3;
             btnMenu.Text = "             Menu";
             btnMenu.UseVisualStyleBackColor = false;
@@ -251,15 +252,15 @@
             btnSubMenu02.Text = "             Sub menu";
             btnSubMenu02.UseVisualStyleBackColor = false;
             // 
-            // btnSetting
+            // pnlSetting
             // 
-            btnSetting.BackColor = SystemColors.ActiveCaptionText;
-            btnSetting.Controls.Add(btnSettings);
-            btnSetting.Location = new Point(0, 99);
-            btnSetting.Margin = new Padding(0);
-            btnSetting.Name = "btnSetting";
-            btnSetting.Size = new Size(190, 42);
-            btnSetting.TabIndex = 2;
+            pnlSetting.BackColor = SystemColors.ActiveCaptionText;
+            pnlSetting.Controls.Add(btnSettings);
+            pnlSetting.Location = new Point(0, 99);
+            pnlSetting.Margin = new Padding(0);
+            pnlSetting.Name = "pnlSetting";
+            pnlSetting.Size = new Size(190, 42);
+            pnlSetting.TabIndex = 2;
             // 
             // btnSettings
             // 
@@ -269,22 +270,22 @@
             btnSettings.Font = new Font("Mont Heavy DEMO", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnSettings.ForeColor = Color.White;
             btnSettings.Image = (Image)resources.GetObject("btnSettings.Image");
-            btnSettings.Location = new Point(3, 0);
+            btnSettings.Location = new Point(0, 0);
             btnSettings.Name = "btnSettings";
-            btnSettings.Size = new Size(187, 42);
+            btnSettings.Size = new Size(196, 42);
             btnSettings.TabIndex = 3;
             btnSettings.Text = "             Settings";
             btnSettings.UseVisualStyleBackColor = false;
             // 
-            // panel4
+            // pnlAbout
             // 
-            panel4.BackColor = SystemColors.ActiveCaptionText;
-            panel4.Controls.Add(button3);
-            panel4.Location = new Point(0, 141);
-            panel4.Margin = new Padding(0);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(190, 42);
-            panel4.TabIndex = 2;
+            pnlAbout.BackColor = SystemColors.ActiveCaptionText;
+            pnlAbout.Controls.Add(button3);
+            pnlAbout.Location = new Point(0, 141);
+            pnlAbout.Margin = new Padding(0);
+            pnlAbout.Name = "pnlAbout";
+            pnlAbout.Size = new Size(190, 42);
+            pnlAbout.TabIndex = 2;
             // 
             // button3
             // 
@@ -296,20 +297,20 @@
             button3.Image = (Image)resources.GetObject("button3.Image");
             button3.Location = new Point(0, 0);
             button3.Name = "button3";
-            button3.Size = new Size(190, 42);
+            button3.Size = new Size(196, 42);
             button3.TabIndex = 3;
             button3.Text = "             About";
             button3.UseVisualStyleBackColor = false;
             // 
-            // panel5
+            // pnlLogout
             // 
-            panel5.BackColor = SystemColors.ActiveCaptionText;
-            panel5.Controls.Add(button4);
-            panel5.Location = new Point(0, 183);
-            panel5.Margin = new Padding(0);
-            panel5.Name = "panel5";
-            panel5.Size = new Size(190, 42);
-            panel5.TabIndex = 2;
+            pnlLogout.BackColor = SystemColors.ActiveCaptionText;
+            pnlLogout.Controls.Add(button4);
+            pnlLogout.Location = new Point(0, 183);
+            pnlLogout.Margin = new Padding(0);
+            pnlLogout.Name = "pnlLogout";
+            pnlLogout.Size = new Size(190, 42);
+            pnlLogout.TabIndex = 2;
             // 
             // button4
             // 
@@ -321,7 +322,7 @@
             button4.Image = (Image)resources.GetObject("button4.Image");
             button4.Location = new Point(0, 0);
             button4.Name = "button4";
-            button4.Size = new Size(190, 42);
+            button4.Size = new Size(196, 42);
             button4.TabIndex = 3;
             button4.Text = "             Logout";
             button4.UseVisualStyleBackColor = false;
@@ -336,28 +337,38 @@
             sideBarTransition.Interval = 10;
             sideBarTransition.Tick += sideBarTransition_Tick;
             // 
+            // panel2
+            // 
+            panel2.Dock = DockStyle.Fill;
+            panel2.Location = new Point(193, 43);
+            panel2.Name = "panel2";
+            panel2.Size = new Size(822, 554);
+            panel2.TabIndex = 3;
+            // 
             // FrmHome
             // 
             AutoScaleMode = AutoScaleMode.None;
             ClientSize = new Size(1015, 597);
+            Controls.Add(panel2);
             Controls.Add(flpSidebar);
             Controls.Add(panel1);
             ForeColor = Color.FromArgb(64, 64, 64);
             FormBorderStyle = FormBorderStyle.None;
+            IsMdiContainer = true;
             Name = "FrmHome";
             StartPosition = FormStartPosition.CenterScreen;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)btnHam).EndInit();
             flpSidebar.ResumeLayout(false);
-            panel2.ResumeLayout(false);
+            pnlDashboard.ResumeLayout(false);
             flpMenu.ResumeLayout(false);
-            panel3.ResumeLayout(false);
+            pnlMenu.ResumeLayout(false);
             panel7.ResumeLayout(false);
             panel6.ResumeLayout(false);
-            btnSetting.ResumeLayout(false);
-            panel4.ResumeLayout(false);
-            panel5.ResumeLayout(false);
+            pnlSetting.ResumeLayout(false);
+            pnlAbout.ResumeLayout(false);
+            pnlLogout.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -368,16 +379,16 @@
         private PictureBox btnHam;
         private ReaLTaiizor.Controls.NightControlBox nightControlBox1;
         private FlowLayoutPanel flpSidebar;
-        private Panel panel2;
+        private Panel pnlDashboard;
         private Button button1;
-        private Panel btnSetting;
+        private Panel pnlSetting;
         private Button btnSettings;
-        private Panel panel4;
+        private Panel pnlAbout;
         private Button button3;
-        private Panel panel5;
+        private Panel pnlLogout;
         private Button button4;
         private FlowLayoutPanel flpMenu;
-        private Panel panel3;
+        private Panel pnlMenu;
         private Button btnMenu;
         private Panel panel6;
         private Button btnSubMenu02;
@@ -385,5 +396,6 @@
         private Button btnSubMenu01;
         private System.Windows.Forms.Timer menuTransition;
         private System.Windows.Forms.Timer sideBarTransition;
+        private Panel panel2;
     }
 }

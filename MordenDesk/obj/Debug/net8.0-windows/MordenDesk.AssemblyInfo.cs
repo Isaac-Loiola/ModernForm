@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MordenDesk")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3ad16a7830988945d70dacbde77324205b40e62d")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+5e34610cd3f8472979920c2ec966b05e241d542b")]
 [assembly: System.Reflection.AssemblyProductAttribute("MordenDesk")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MordenDesk")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -55,6 +55,12 @@ namespace MordenDesk
                 {
                     sidebarExpand = true;
                     sideBarTransition.Stop();
+
+                    pnlDashboard.Width = flpSidebar.Width;
+                    pnlAbout.Width = flpSidebar.Width;
+                    pnlSetting.Width = flpSidebar.Width;
+                    pnlLogout.Width = flpSidebar.Width;
+                    pnlMenu.Width = flpSidebar.Width;
                 }
             }
         }
@@ -62,6 +68,11 @@ namespace MordenDesk
         private void btnHam_Click(object sender, EventArgs e)
         {
             sideBarTransition.Start();
+        }
+
+        private void parrotClock1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
