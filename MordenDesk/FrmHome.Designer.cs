@@ -317,7 +317,6 @@
             // 
             // menuTransition
             // 
-            menuTransition.Tick += this.menuTransition_Tick_1;
             // 
             // FrmHome
             // 
