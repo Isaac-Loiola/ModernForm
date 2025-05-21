@@ -31,9 +31,9 @@
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmHome));
             panel1 = new Panel();
+            nightControlBox1 = new ReaLTaiizor.Controls.NightControlBox();
             label1 = new Label();
             pictureBox1 = new PictureBox();
-            nightControlBox1 = new ReaLTaiizor.Controls.NightControlBox();
             flowLayoutPanel1 = new FlowLayoutPanel();
             panel2 = new Panel();
             button1 = new Button();
@@ -46,10 +46,10 @@
             flpMenu = new FlowLayoutPanel();
             panel3 = new Panel();
             button2 = new Button();
-            panel6 = new Panel();
-            button5 = new Button();
             panel7 = new Panel();
             button6 = new Button();
+            panel6 = new Panel();
+            button5 = new Button();
             menuTransition = new System.Windows.Forms.Timer(components);
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -60,8 +60,8 @@
             panel5.SuspendLayout();
             flpMenu.SuspendLayout();
             panel3.SuspendLayout();
-            panel6.SuspendLayout();
             panel7.SuspendLayout();
+            panel6.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -75,6 +75,29 @@
             panel1.Name = "panel1";
             panel1.Size = new Size(1015, 43);
             panel1.TabIndex = 0;
+            // 
+            // nightControlBox1
+            // 
+            nightControlBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            nightControlBox1.BackColor = Color.Transparent;
+            nightControlBox1.CloseHoverColor = Color.FromArgb(199, 80, 80);
+            nightControlBox1.CloseHoverForeColor = Color.White;
+            nightControlBox1.DefaultLocation = true;
+            nightControlBox1.DisableMaximizeColor = Color.FromArgb(105, 105, 105);
+            nightControlBox1.DisableMinimizeColor = Color.FromArgb(105, 105, 105);
+            nightControlBox1.EnableCloseColor = Color.FromArgb(160, 160, 160);
+            nightControlBox1.EnableMaximizeButton = true;
+            nightControlBox1.EnableMaximizeColor = Color.FromArgb(160, 160, 160);
+            nightControlBox1.EnableMinimizeButton = true;
+            nightControlBox1.EnableMinimizeColor = Color.FromArgb(160, 160, 160);
+            nightControlBox1.Location = new Point(876, 0);
+            nightControlBox1.MaximizeHoverColor = Color.FromArgb(15, 255, 255, 255);
+            nightControlBox1.MaximizeHoverForeColor = Color.White;
+            nightControlBox1.MinimizeHoverColor = Color.FromArgb(15, 255, 255, 255);
+            nightControlBox1.MinimizeHoverForeColor = Color.White;
+            nightControlBox1.Name = "nightControlBox1";
+            nightControlBox1.Size = new Size(139, 31);
+            nightControlBox1.TabIndex = 1;
             // 
             // label1
             // 
@@ -95,29 +118,6 @@
             pictureBox1.SizeMode = PictureBoxSizeMode.CenterImage;
             pictureBox1.TabIndex = 1;
             pictureBox1.TabStop = false;
-            // 
-            // nightControlBox1
-            // 
-            nightControlBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            nightControlBox1.BackColor = Color.Transparent;
-            nightControlBox1.CloseHoverColor = Color.FromArgb(199, 80, 80);
-            nightControlBox1.CloseHoverForeColor = Color.White;
-            nightControlBox1.DefaultLocation = true;
-            nightControlBox1.DisableMaximizeColor = Color.FromArgb(105, 105, 105);
-            nightControlBox1.DisableMinimizeColor = Color.FromArgb(105, 105, 105);
-            nightControlBox1.EnableCloseColor = Color.FromArgb(160, 160, 160);
-            nightControlBox1.EnableMaximizeButton = true;
-            nightControlBox1.EnableMaximizeColor = Color.FromArgb(160, 160, 160);
-            nightControlBox1.EnableMinimizeButton = true;
-            nightControlBox1.EnableMinimizeColor = Color.FromArgb(160, 160, 160);
-            nightControlBox1.Location = new Point(873, 5);
-            nightControlBox1.MaximizeHoverColor = Color.FromArgb(15, 255, 255, 255);
-            nightControlBox1.MaximizeHoverForeColor = Color.White;
-            nightControlBox1.MinimizeHoverColor = Color.FromArgb(15, 255, 255, 255);
-            nightControlBox1.MinimizeHoverForeColor = Color.White;
-            nightControlBox1.Name = "nightControlBox1";
-            nightControlBox1.Size = new Size(139, 31);
-            nightControlBox1.TabIndex = 1;
             // 
             // flowLayoutPanel1
             // 
@@ -263,32 +263,6 @@
             button2.Text = "             Menu";
             button2.UseVisualStyleBackColor = false;
             // 
-            // panel6
-            // 
-            panel6.BackColor = SystemColors.ActiveCaptionText;
-            panel6.Controls.Add(button5);
-            panel6.Location = new Point(0, 84);
-            panel6.Margin = new Padding(0);
-            panel6.Name = "panel6";
-            panel6.Size = new Size(190, 42);
-            panel6.TabIndex = 2;
-            // 
-            // button5
-            // 
-            button5.BackColor = Color.Black;
-            button5.FlatAppearance.BorderSize = 0;
-            button5.FlatStyle = FlatStyle.Flat;
-            button5.Font = new Font("Mont Heavy DEMO", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            button5.ForeColor = Color.White;
-            button5.Image = (Image)resources.GetObject("button5.Image");
-            button5.Location = new Point(0, 0);
-            button5.Margin = new Padding(0);
-            button5.Name = "button5";
-            button5.Size = new Size(190, 42);
-            button5.TabIndex = 3;
-            button5.Text = "             Sub menu";
-            button5.UseVisualStyleBackColor = false;
-            // 
             // panel7
             // 
             panel7.BackColor = SystemColors.ActiveCaptionText;
@@ -315,9 +289,35 @@
             button6.Text = "             Sub menu";
             button6.UseVisualStyleBackColor = false;
             // 
+            // panel6
+            // 
+            panel6.BackColor = SystemColors.ActiveCaptionText;
+            panel6.Controls.Add(button5);
+            panel6.Location = new Point(0, 84);
+            panel6.Margin = new Padding(0);
+            panel6.Name = "panel6";
+            panel6.Size = new Size(190, 42);
+            panel6.TabIndex = 2;
+            // 
+            // button5
+            // 
+            button5.BackColor = Color.Black;
+            button5.FlatAppearance.BorderSize = 0;
+            button5.FlatStyle = FlatStyle.Flat;
+            button5.Font = new Font("Mont Heavy DEMO", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            button5.ForeColor = Color.White;
+            button5.Image = (Image)resources.GetObject("button5.Image");
+            button5.Location = new Point(0, 0);
+            button5.Margin = new Padding(0);
+            button5.Name = "button5";
+            button5.Size = new Size(190, 42);
+            button5.TabIndex = 3;
+            button5.Text = "             Sub menu";
+            button5.UseVisualStyleBackColor = false;
+            // 
             // menuTransition
             // 
-            menuTransition.Tick += this.menuTransition_Tick;
+            menuTransition.Tick += this.menuTransition_Tick_1;
             // 
             // FrmHome
             // 
@@ -344,8 +344,8 @@
             panel5.ResumeLayout(false);
             flpMenu.ResumeLayout(false);
             panel3.ResumeLayout(false);
-            panel6.ResumeLayout(false);
             panel7.ResumeLayout(false);
+            panel6.ResumeLayout(false);
             ResumeLayout(false);
         }
 
