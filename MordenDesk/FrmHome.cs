@@ -1,8 +1,8 @@
 namespace MordenDesk
 {
-    public partial class Form1 : Form
+    public partial class FrmHome : Form
     {
-        public Form1()
+        public FrmHome()
         {
             InitializeComponent();
         }
